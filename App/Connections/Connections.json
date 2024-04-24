@@ -1,0 +1,56 @@
+{
+  "779f9bc5-1d29-4304-9d53-486b5076a56c": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Excel",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1686/1.0.1686.3695/excel/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excel",
+      "parameterHints": {
+        "9132e70c-def0-4459-9640-ef8620febfaa": {
+          "value": "fileSource"
+        }
+      },
+      "parameterHintsV2": {
+        "fileSource": {
+          "value": "9132e70c-def0-4459-9640-ef8620febfaa"
+        }
+      }
+    },
+    "datasets": {
+      "b!UY91ShyhvESboHCz4flNn3GToeE_ghBMmiE1x5_EpbMCstMSZ8vtTYA90XF6fRZL.01S5PN5LF5CM7Y6V2FRRB3K6VVHBK3AMIB": {
+        "dataSources": {
+          "CoffeeMachines_1": {
+            "tableName": "CoffeeMachines"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "CoffeeMachines_1"
+    ],
+    "dependencies": {
+      "fileSource": "9132e70c-def0-4459-9640-ef8620febfaa"
+    },
+    "dependents": [],
+    "id": "779f9bc5-1d29-4304-9d53-486b5076a56c"
+  },
+  "9132e70c-def0-4459-9640-ef8620febfaa": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "OneDrive for Business",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1689/1.0.1689.3722/onedriveforbusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "779f9bc5-1d29-4304-9d53-486b5076a56c"
+    ],
+    "id": "9132e70c-def0-4459-9640-ef8620febfaa"
+  }
+}

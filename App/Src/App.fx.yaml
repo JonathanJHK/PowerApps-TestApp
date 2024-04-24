@@ -1,0 +1,26 @@
+App As appinfo:
+    BackEnabled: =true
+    OnStart: |-
+        =//Criando as variaveis globais
+        Set(
+            gblTeste1,
+            1
+        );
+        Set(
+            gblTeste2,
+            2
+        );
+        Set(
+            gblTeste3,
+            3
+        )
+    StartScreen: =Screen2
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

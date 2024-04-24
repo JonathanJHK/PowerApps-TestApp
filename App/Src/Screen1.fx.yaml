@@ -1,0 +1,201 @@
+Screen1 As screen:
+
+    Button2 As button:
+        Height: =50
+        OnSelect: |-
+            =ClearCollect(colTeste,{ID: 1, Nome: "Pedro"},{ID: 2, Nome: "Jonathan"},{ID: 3, Nome: "Edimar de Oliveira"})
+        Text: ="ClearCollect Padrão"
+        Width: =249
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+    Gallery1 As gallery.galleryVertical:
+        BorderThickness: =1
+        DelayItemLoading: =true
+        Fill: =RGBA(241, 244, 249, 1)
+        Height: =255
+        Items: |-
+            =Filter(
+                Search(
+                    colTeste,
+                    txt_search_nome.Text,
+                    Nome
+                ),
+                Nome in ComboBox1.SelectedItems
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =57
+        Width: =1203
+        X: =60
+        Y: =468
+        ZIndex: =2
+
+        Label5 As label:
+            Height: =57
+            OnSelect: =Select(Parent)
+            Text: |-
+                ="Nome: "&ThisItem.Nome
+            Width: =758
+            ZIndex: =1
+
+        Label5_1 As label:
+            Align: =Align.Center
+            Height: =57
+            OnSelect: =Select(Parent)
+            Text: |-
+                ="#"&ThisItem.ID
+            Width: =56
+            X: =1020
+            ZIndex: =2
+
+        Image1 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Height: =30
+            HoverFill: =
+            Image: =remover
+            OnSelect: =Remove(colTeste, ThisItem);Notify("⛔ Item removido com sucesso.",NotificationType.Success,6000)
+            PressedFill: =
+            TabIndex: =100
+            Width: =30
+            X: =1076
+            Y: =13
+            ZIndex: =3
+
+        Button3 As button:
+            DisplayMode: =DisplayMode.Disabled
+            Height: =1
+            OnSelect: =Select(Parent)
+            Text: =""
+            Width: =1193
+            Y: =56
+            ZIndex: =4
+
+    Label6 As label:
+        Align: =Align.Center
+        Size: =10
+        Text: ="Remover"
+        Width: =73
+        X: =1116
+        Y: =420
+        ZIndex: =5
+
+    Label7 As label:
+        Text: |-
+            ="Nome:"
+        X: =60
+        Y: =338
+        ZIndex: =6
+
+    txt_nome As text:
+        Default: =""
+        HintText: ="Insira seu nome"
+        Tooltip: ="Insira seu nome"
+        X: =60
+        Y: =378
+        ZIndex: =7
+
+    Image2 As image:
+        Height: =30
+        Image: ='salve-'
+        OnSelect: |-
+            =Collect(
+                colTeste,
+                {
+                    ID: Last(colTeste).ID + 1,
+                    Nome: txt_nome.Text
+                }
+            );
+            Notify(
+                "Item adicionado com sucesso.",
+                NotificationType.Success,
+                6000
+            );Reset(txt_nome)
+        Width: =30
+        X: =398
+        Y: =383
+        ZIndex: =8
+
+    Image2_1 As image:
+        Height: =30
+        Image: =cancelar
+        OnSelect: =Reset(txt_nome);SetFocus(txt_nome)
+        Width: =30
+        X: =443
+        Y: =383
+        ZIndex: =9
+
+    txt_search_nome As text:
+        Default: =
+        HintText: ="🔎 Pesquisar nome"
+        X: =943
+        Y: =378
+        ZIndex: =10
+
+    ComboBox1 As combobox:
+        DisplayFields: =["Value"]
+        Height: =38
+        Items: =Distinct(colTeste,Nome)
+        SearchFields: =["Value"]
+        SearchItems: =Search(Distinct(colTeste,Nome),ComboBox1.SearchText,Value)
+        Width: =168
+        X: =768
+        Y: =380
+        ZIndex: =11
+
+    Label2 As label:
+        Align: =Align.Center
+        Text: =loc_local
+        Width: =230
+        X: =692
+        Y: =10
+        ZIndex: =12
+
+    Button4 As button:
+        OnSelect: |-
+            =UpdateContext({loc_local: 1})
+        Text: ="criar variavel local"
+        Width: =230
+        X: =692
+        Y: =50
+        ZIndex: =13
+
+    Button4_1 As button:
+        OnSelect: =Set(gbl_global,1)
+        Text: ="criar variavel global"
+        Width: =230
+        X: =943
+        Y: =50
+        ZIndex: =14
+
+    Button4_2 As button:
+        OnSelect: |-
+            =With(
+                {var_variavel_funcao: 1},
+                UpdateContext({loc_nova_var_funcao: gbl_global + var_variavel_funcao})
+            )
+        Text: ="criar variavel função"
+        Width: =230
+        X: =692
+        Y: =143
+        ZIndex: =15
+
+    Label2_1 As label:
+        Align: =Align.Center
+        Text: =gbl_global
+        Width: =230
+        X: =943
+        Y: =10
+        ZIndex: =16
+
+    Label2_2 As label:
+        Align: =Align.Center
+        Text: =loc_nova_var_funcao
+        Width: =230
+        X: =692
+        Y: =103
+        ZIndex: =17
+

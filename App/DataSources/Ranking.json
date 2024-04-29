@@ -8,18 +8,19 @@
     },
     "ConnectedDataSourceInfoNameMapping": {
       "__PowerAppsId__": "Row id",
-      "Apelido": "Apelido",
       "Data": "Data",
-      "Nome": "Nome",
+      "ID": "ID",
+      "ID_x0020_Participante": "ID Participante",
       "Pontuação": "Pontuação",
       "Ranking": "Ranking",
+      "Season": "Season",
       "Semana": "Semana"
     },
     "DatasetName": "b!UY91ShyhvESboHCz4flNn3GToeE_ghBMmiE1x5_EpbMCstMSZ8vtTYA90XF6fRZL.01S5PN5LFAXMETBGJRABCZJNK33BOH3IFZ",
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "Tabela9",
+    "Name": "Ranking",
     "Type": "ConnectedDataSourceInfo"
   }
 ]

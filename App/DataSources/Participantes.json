@@ -1,0 +1,23 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_excel",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-04-16T16:46:09.9260000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "__PowerAppsId__": "Row id",
+      "Apelido": "Apelido",
+      "ID": "ID",
+      "Nome": "Nome",
+      "Status": "Status"
+    },
+    "DatasetName": "b!UY91ShyhvESboHCz4flNn3GToeE_ghBMmiE1x5_EpbMCstMSZ8vtTYA90XF6fRZL.01S5PN5LFAXMETBGJRABCZJNK33BOH3IFZ",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Participantes",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

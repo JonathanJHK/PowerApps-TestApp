@@ -643,6 +643,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "AppScreen2.ScreenContainer1.MainContainer1.con_Main1.'con_Main1.1'.'con_Main1.1.1'.Form1.'ID Participante_DataCard3'.DataCardValue5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "AppScreen2.ScreenContainer1.MainContainer1.con_Main1.'con_Main1.1'.'con_Main1.1.1'.Form1.'ID Participante_DataCard3'.DataCardValue5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "AppScreen2",
+                "type": "AppScreen2.ScreenContainer1.MainContainer1.con_Main1.'con_Main1.1'.'con_Main1.1.1'.Form1.'ID Participante_DataCard3'.DataCardValue5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.gblTeste1"
                 }
               ],

@@ -125,7 +125,7 @@
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "teste",
+    "AppName": "3af03892-de9c-4bc7-8c85-efddaf02f979",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
@@ -137,6 +137,7 @@
   },
   "ScreenOrder": [
     "Screen1",
-    "Screen2"
+    "HomeScreen1",
+    "AppScreen2"
   ]
 }

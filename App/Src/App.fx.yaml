@@ -14,7 +14,7 @@ App As appinfo:
             gblTeste3,
             3
         )
-    StartScreen: =Screen2
+    StartScreen: =HomeScreen1
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:

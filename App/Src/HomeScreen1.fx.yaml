@@ -1,4 +1,4 @@
-"Screen2 As screen.'tabletLayout_Tutorial_ver3.0'":
+"HomeScreen1 As screen.'tabletLayout_Tutorial_ver3.0'":
 
     RectTextBkg1 As rectangle:
         Height: =Parent.Height
@@ -11,7 +11,7 @@
         Height: =55
         Items: |-
             =Table(         
-             {Step: 0, Text:"Crie um tutorial para mostrar às pessoas como usar seu aplicativo.", Image: SampleImage},         
+             {Step: 0, Text:"Crie um tutorial para mostrar às pessoas como usar seu aplicativo.", Image: '157677192'},         
              {Step: 1, Text:"Personalize o texto da barra de fórmulas. Abra a barra de fórmulas selecionando os pontos do indicador de tela.", Image: SampleImage},         
              {Step: 2, Text:"Use capturas de tela do seu aplicativo para destacar recursos e exibir sua interface.", Image: SampleImage},         
              {Step: 3, Text:"As telas de tutorial começam com zero na fórmula. Deixe esse zero para que seu tutorial avance corretamente.", Image: SampleImage}         
@@ -38,11 +38,11 @@
 
     TutorialImage1 As image:
         AccessibleLabel: ="Layouts_Tutorial_Image_Accessible_Text"
-        Height: =Self.Width
+        Height: =768
         Image: =If(IsBlank(_guideStep), First(TutorialNavigator1.AllItems).Image, LookUp(TutorialNavigator1.AllItems, Step = _guideStep).Image)
-        Width: =Parent.Width / 2 - 200
-        X: =Parent.Width/2 + Parent.Width/4 - Self.Width/2
-        Y: =Parent.Height/2 - Self.Height/2
+        ImagePosition: =ImagePosition.Fill
+        Width: =683
+        X: =683
         ZIndex: =3
 
     TutorialText1 As label:
@@ -54,7 +54,7 @@
         Size: =17
         Text: =If(IsBlank(_guideStep), First(TutorialNavigator1.AllItems).Text, LookUp(TutorialNavigator1.AllItems, Step = _guideStep).Text)
         Width: =iconNext1.X - iconNext1.Width - iconPrev1.X
-        X: =iconPrev1.X + iconPrev1.Width
+        X: =98
         Y: =Parent.Height / 2 - Self.Height/2 - 50
         ZIndex: =4
 

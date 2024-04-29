@@ -24,10 +24,18 @@
             "tableName": "CoffeeMachines"
           }
         }
+      },
+      "b!UY91ShyhvESboHCz4flNn3GToeE_ghBMmiE1x5_EpbMCstMSZ8vtTYA90XF6fRZL.01S5PN5LFAXMETBGJRABCZJNK33BOH3IFZ": {
+        "dataSources": {
+          "Tabela9": {
+            "tableName": "Tabela9"
+          }
+        }
       }
     },
     "dataSources": [
-      "CoffeeMachines_1"
+      "CoffeeMachines_1",
+      "Tabela9"
     ],
     "dependencies": {
       "fileSource": "9132e70c-def0-4459-9640-ef8620febfaa"

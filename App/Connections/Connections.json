@@ -1,21 +1,23 @@
 {
-  "779f9bc5-1d29-4304-9d53-486b5076a56c": {
-    "appActions": [],
+  "0d0115c9-e631-47f9-824a-3a48aaef794a": {
     "connectionRef": {
-      "apiTier": "Standard",
+      "displayName": "OneDrive for Business",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1689/1.0.1689.3722/onedriveforbusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "f195499c-f459-49a3-b95b-26845ed122d3"
+    ],
+    "id": "0d0115c9-e631-47f9-824a-3a48aaef794a"
+  },
+  "f195499c-f459-49a3-b95b-26845ed122d3": {
+    "connectionRef": {
       "displayName": "Excel",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1686/1.0.1686.3695/excel/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_excel",
-      "parameterHints": {
-        "9132e70c-def0-4459-9640-ef8620febfaa": {
-          "value": "fileSource"
-        }
-      },
-      "parameterHintsV2": {
-        "fileSource": {
-          "value": "9132e70c-def0-4459-9640-ef8620febfaa"
-        }
-      }
+      "id": "/providers/microsoft.powerapps/apis/shared_excel"
     },
     "datasets": {
       "b!UY91ShyhvESboHCz4flNn3GToeE_ghBMmiE1x5_EpbMCstMSZ8vtTYA90XF6fRZL.01S5PN5LFAXMETBGJRABCZJNK33BOH3IFZ": {
@@ -30,31 +32,13 @@
       }
     },
     "dataSources": [
-      "Ranking",
-      "Participantes"
+      "Participantes",
+      "Ranking"
     ],
     "dependencies": {
-      "fileSource": "9132e70c-def0-4459-9640-ef8620febfaa"
+      "fileSource": "0d0115c9-e631-47f9-824a-3a48aaef794a"
     },
     "dependents": [],
-    "id": "779f9bc5-1d29-4304-9d53-486b5076a56c"
-  },
-  "9132e70c-def0-4459-9640-ef8620febfaa": {
-    "appActions": [],
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "OneDrive for Business",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1689/1.0.1689.3722/onedriveforbusiness/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "779f9bc5-1d29-4304-9d53-486b5076a56c"
-    ],
-    "id": "9132e70c-def0-4459-9640-ef8620febfaa"
+    "id": "f195499c-f459-49a3-b95b-26845ed122d3"
   }
 }

@@ -59,7 +59,7 @@
       "exportimportcomponents2": true,
       "externalmessage": false,
       "fluentv9controls": false,
-      "fluentv9controlspreview": false,
+      "fluentv9controlspreview": true,
       "formuladataprefetch": true,
       "formularepair": false,
       "generatedebugpublishedapp": false,
@@ -108,9 +108,9 @@
     "DocumentAppType": "DesktopOrTablet",
     "DocumentLayoutHeight": 768,
     "DocumentLayoutLockOrientation": false,
-    "DocumentLayoutMaintainAspectRatio": true,
+    "DocumentLayoutMaintainAspectRatio": false,
     "DocumentLayoutOrientation": "landscape",
-    "DocumentLayoutScaleToFit": true,
+    "DocumentLayoutScaleToFit": false,
     "DocumentLayoutWidth": 1366,
     "DocumentType": "App",
     "EnableInstrumentation": false,
@@ -138,6 +138,7 @@
   "ScreenOrder": [
     "Screen1",
     "HomeScreen1",
+    "AppScreen1",
     "AppScreen2"
   ]
 }

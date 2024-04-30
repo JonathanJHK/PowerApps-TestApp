@@ -13,6 +13,20 @@
     ],
     "id": "0d0115c9-e631-47f9-824a-3a48aaef794a"
   },
+  "8f2c2a98-203d-4c99-953f-30ec6881c3c7": {
+    "connectionRef": {
+      "displayName": "Usuários do Office 365",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1677/1.0.1677.3637/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users"
+    },
+    "datasets": {},
+    "dataSources": [
+      "UsuáriosdoOffice365"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "8f2c2a98-203d-4c99-953f-30ec6881c3c7"
+  },
   "f195499c-f459-49a3-b95b-26845ed122d3": {
     "connectionRef": {
       "displayName": "Excel",

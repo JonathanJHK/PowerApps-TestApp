@@ -14,8 +14,8 @@ App As appinfo:
             gblTeste3,
             3
         )
-    StartScreen: =HomeScreen1
-    Theme: =PowerAppsTheme
+    StartScreen: =AppScreen2
+    Theme: =OrangeTheme
 
     Host As hostControl.DefaultHostControlVariant:
         OnCancel: =false

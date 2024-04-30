@@ -583,18 +583,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen6"
+                  "fullyQualifiedName": "AppScreen2.ScreenContainer3.con_Main_AppScreen2.gal_navTabs.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen6",
+                  "fullyQualifiedName": "AppScreen2.ScreenContainer3.con_Main_AppScreen2.gal_navTabs.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "module": "Screen6",
-                "type": "Screen6"
+                "member": "TabIndex",
+                "module": "AppScreen2",
+                "type": "AppScreen2.ScreenContainer3.con_Main_AppScreen2.gal_navTabs"
               }
             }
           ],
@@ -602,10 +603,40 @@
             "id": "issue"
           },
           "properties": {
-            "level": "Low"
+            "level": "Medium"
           },
-          "ruleId": "acc-ReadableScreenNameNeeded",
-          "ruleIndex": 3
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "AppScreen2.ScreenContainer3.con_Main_AppScreen2.gal_navTabs.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "AppScreen2.ScreenContainer3.con_Main_AppScreen2.gal_navTabs.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "AppScreen2",
+                "type": "AppScreen2.ScreenContainer3.con_Main_AppScreen2.gal_navTabs"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
         },
         {
           "locations": [

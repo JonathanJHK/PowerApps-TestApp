@@ -13,6 +13,29 @@ App As appinfo:
         Set(
             gblTeste3,
             3
+        );
+        ClearCollect(
+            col_Tabs,
+            {
+                ID: 1,
+                Name: "Ranking",
+                Logo: Icon.Tag
+            },
+            {
+                ID: 2,
+                Name: "My Ranking",
+                Logo: Icon.LogJournal
+            },
+            {
+                ID: 3,
+                Name: "Register Ranking",
+                Logo: Icon.AddUser
+            },
+            {
+                ID: 4,
+                Name: "Information",
+                Logo: Icon.Information
+            }
         )
     StartScreen: =AppScreen2
     Theme: =OrangeTheme

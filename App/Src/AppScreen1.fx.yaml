@@ -70,9 +70,12 @@
                         ZIndex: =3
 
                         Form1 As form:
+                            AlignInContainer: =AlignInContainer.SetByContainer
                             BorderStyle: =BorderStyle.None
                             DataSource: =Ranking
                             DefaultMode: =FormMode.New
+                            LayoutMinHeight: =250
+                            LayoutMinWidth: =400
                             NumberOfColumns: =1
                             OnFailure: =FormMode.New
                             OnReset: =FormMode.New

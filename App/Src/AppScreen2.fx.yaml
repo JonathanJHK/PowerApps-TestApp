@@ -72,42 +72,41 @@
             LayoutMode: =LayoutMode.Auto
             ZIndex: =2
 
-            gal_navTabs As gallery.variableTemplateHeightGallery:
+            gal_navTabs As gallery.galleryVertical:
                 DelayItemLoading: =true
-                Height: =Parent.Height
                 Items: =col_Tabs
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =Parent.Height
                 LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
-                TemplateSize: =280
+                OnSelect: =Set(var_tabSelect, ThisItem.ID)
+                TemplateSize: =Parent.Height
+                WrapCount: =4
                 ZIndex: =1
 
-                TextCanvas5 As Texto:
-                    AutoHeight: =false
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(0, 0, 0, 1)
-                    Height: =32
-                    Text: =ThisItem.Name
-                    Visible: =true
-                    Width: =96
-                    X: =40
-                    Y: =40
-                    ZIndex: =1
-
-                Icon3 As icon.Add:
-                    Icon: =Icon.Add
+                ico_navTabs As icon.Add:
+                    Height: =30
+                    Icon: =ThisItem.Logo
                     OnSelect: =Select(Parent)
-                    X: =181
-                    Y: =72
+                    Width: =30
+                    X: =(Parent.TemplateWidth - Self.Width)/2
                     ZIndex: =2
 
-                Label4 As label:
+                Rectangle5 As rectangle:
+                    Height: =6
+                    OnSelect: =Select(Parent)
+                    Visible: =var_tabSelect = ThisItem.ID
+                    Width: =Parent.TemplateWidth
+                    Y: =89
+                    ZIndex: =3
+
+                lbl_navTabs As label:
+                    Align: =Align.Center
                     OnSelect: =Select(Parent)
                     Text: =ThisItem.Name
-                    X: =53
-                    Y: =136
-                    ZIndex: =3
+                    Width: =Parent.TemplateWidth
+                    Y: =30
+                    ZIndex: =4
 
         MainContainer3 As groupContainer.verticalAutoLayoutContainer:
             Fill: =RGBA(214, 221, 224, 1)
@@ -122,9 +121,12 @@
             ZIndex: =3
 
         FooterContainer2 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             Fill: =RGBA(174, 208, 221, 1)
             FillPortions: =0
             Height: =75
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             RadiusBottomLeft: =8
             RadiusBottomRight: =8

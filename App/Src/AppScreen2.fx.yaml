@@ -80,6 +80,8 @@
                 LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
                 OnSelect: =Set(var_tabSelect, ThisItem.ID)
+                TemplateFill: =If(ThisItem.IsSelected, RGBA(19, 137, 126, 0.45), RGBA(0, 0, 0, 0))
+                TemplatePadding: =0
                 TemplateSize: =Parent.Height
                 WrapCount: =4
                 ZIndex: =1
@@ -89,7 +91,8 @@
                     Icon: =ThisItem.Logo
                     OnSelect: =Select(Parent)
                     Width: =30
-                    X: =(Parent.TemplateWidth - Self.Width)/2
+                    X: =(Parent.TemplateWidth - Self.Width)/ 2
+                    Y: =5
                     ZIndex: =2
 
                 Rectangle5 As rectangle:

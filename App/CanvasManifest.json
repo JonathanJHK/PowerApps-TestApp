@@ -137,7 +137,6 @@
   },
   "ScreenOrder": [
     "Screen1",
-    "HomeScreen1",
     "AppScreen1",
     "AppScreen2"
   ]

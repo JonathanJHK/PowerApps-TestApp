@@ -1,7 +1,6 @@
-"AppScreen2 As screen.'autoLayout_HeaderFooter_ver1.0'":
-    Height: =Max(App.Height, If(App.Width < App.Height, App.DesignHeight, App.DesignWidth))
+"Screen6 As screen.'autoLayout_HeaderFooter_ver1.0'":
 
-    ScreenContainer3 As groupContainer.verticalAutoLayoutContainer:
+    ScreenContainer5 As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Parent.Height
         LayoutAlignItems: =LayoutAlignItems.Stretch
@@ -15,8 +14,8 @@
         Width: =Parent.Width
         ZIndex: =1
 
-        HeaderContainer3 As groupContainer.horizontalAutoLayoutContainer:
-            Fill: =RGBA(174, 208, 221, 1)
+        HeaderContainer5 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
             Height: =75
             LayoutMinHeight: =100
@@ -28,8 +27,8 @@
             RadiusTopRight: =8
             ZIndex: =2
 
-        MainContainer3 As groupContainer.verticalAutoLayoutContainer:
-            Fill: =RGBA(214, 221, 224, 1)
+        MainContainer5 As groupContainer.verticalAutoLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
             LayoutDirection: =LayoutDirection.Vertical
             LayoutMinHeight: =100
             LayoutMinWidth: =250
@@ -40,8 +39,8 @@
             RadiusTopRight: =8
             ZIndex: =3
 
-        FooterContainer2 As groupContainer.horizontalAutoLayoutContainer:
-            Fill: =RGBA(174, 208, 221, 1)
+        FooterContainer4 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
             Height: =75
             LayoutMinHeight: =100

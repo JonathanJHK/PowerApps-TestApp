@@ -35,8 +35,9 @@ cmp_MenuNavbar As CanvasComponent:
     Image5 As image:
         Image: |-
             ="data:image/svg+xml;utf8, " & EncodeUrl( 
-                LookUp(customIcons, IconName = "Calendar").IconData
+                LookUp(customIcons, IconName = "Calendar").
             )
-        Y: =85
+        ImagePosition: =ImagePosition.Center
+        Y: =95
         ZIndex: =2
 

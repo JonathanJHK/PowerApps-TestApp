@@ -83,7 +83,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "05/07/2024 17:57:30",
+  "HeaderLastSavedDateTimeUTC": "05/07/2024 17:58:59",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0d0115c9-e631-47f9-824a-3a48aaef794a": "\"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/233b7544b9fd4135b7122ea7a3e99320\"",
@@ -278,7 +278,7 @@
     "Image1": 18,
     "Image2": 11,
     "Image2_1": 12,
-    "Image5": 0,
+    "Image5": 69,
     "img_MenuBarIcon": 68,
     "img_userProfile": 57,
     "Label2": 0,

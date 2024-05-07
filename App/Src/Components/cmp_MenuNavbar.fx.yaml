@@ -1,43 +1,242 @@
 cmp_MenuNavbar As CanvasComponent:
+    BaseIconColor: =RGBA(115, 131, 176, 1)
+    BaseIconColor_Text: ="RGBA(115,131,176,1)"
+    CurrentMenuID: =1
     Fill: =RGBA(0, 0, 0, 0)
-    Height: =640
+    Height: =768
+    HoverFill: =RGBA(0, 0, 0, 0.1)
+    logo_Compact: ='Logo RotaMP App_Completa_Completa'
+    logoPadding_Percent: =20%
+    MenuContent: |-
+        =Table(
+            {
+                MenuIcon: "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trophy' viewBox='0 0 16 16'>
+          <path d='M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5q0 .807-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33 33 0 0 1 2.5.5m.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935m10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935M3.504 1q.01.775.056 1.469c.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.5.5 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667q.045-.694.056-1.469z'/>
+        </svg>",
+                MenuIcon_Selected: "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trophy-fill' viewBox='0 0 16 16'>
+          <path d='M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5q0 .807-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33 33 0 0 1 2.5.5m.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935m10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935'/>
+        </svg>",
+                MenuID: 1,
+                PageNavigation: App.ActiveScreen
+            },
+                {
+                MenuIcon: "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-calendar2-event' viewBox='0 0 16 16'>
+          <path d='M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z'/>
+          <path d='M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z'/>
+          <path d='M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5z'/>
+        </svg>",
+                MenuIcon_Selected: "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-calendar2-event-fill' viewBox='0 0 16 16'>
+          <path d='M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5m9.954 3H2.545c-.3 0-.545.224-.545.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5M11.5 7a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z'/>
+        </svg>",
+                MenuID: 2,
+                PageNavigation: App.ActiveScreen
+            },
+                    {
+                MenuIcon: "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-calendar2-event' viewBox='0 0 16 16'>
+          <path d='M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z'/>
+          <path d='M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z'/>
+          <path d='M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5z'/>
+        </svg>",
+                MenuIcon_Selected: "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-calendar2-event-fill' viewBox='0 0 16 16'>
+          <path d='M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5m9.954 3H2.545c-.3 0-.545.224-.545.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5M11.5 7a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z'/>
+        </svg>",
+                MenuID: 3,
+                PageNavigation: App.ActiveScreen
+            },
+                    {
+                MenuIcon: "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-calendar2-event' viewBox='0 0 16 16'>
+          <path d='M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z'/>
+          <path d='M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z'/>
+          <path d='M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5z'/>
+        </svg>",
+                MenuIcon_Selected: "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-calendar2-event-fill' viewBox='0 0 16 16'>
+          <path d='M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5m9.954 3H2.545c-.3 0-.545.224-.545.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5M11.5 7a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z'/>
+        </svg>",
+                MenuID: 4,
+                PageNavigation: App.ActiveScreen
+            }
+        )
+    NavBG: =RGBA(0, 0, 0, 0.05)
+    PressedFill: =RGBA(0, 0, 0, 0.2)
+    SelectedIconBG: =RGBA(255, 255, 255, 1)
+    SelectedIconColor: =RGBA(254, 189, 47, 1)
+    SelectedIconColor_text: ="RGBA(254, 189, 47, 1)"
     Width: =70
     X: =0
     Y: =0
     ZIndex: =1
 
-    con_MenuBarCollapse As groupContainer.manualLayoutContainer:
+    con_RootMenuNavBar As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
-        Height: =35
-        RadiusBottomLeft: =10
-        RadiusBottomRight: =10
-        RadiusTopLeft: =10
-        RadiusTopRight: =10
-        Width: =35
-        X: =15
-        Y: =15
+        Fill: =cmp_MenuNavbar.NavBG
+        Height: =768
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =20
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =20
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Width: =70
         ZIndex: =1
 
-        img_MenuBarIcon As image:
-            Height: =Parent.Height
-            Image: |-
-                ="data:image/svg+xml;utf8, " & EncodeUrl(
-                    Substitute(
-                        "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-list' viewBox='0 0 16 16'>
-                  <path fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5'/>
-                </svg>",
-                        "currentColor", SampleImage
-                    )
-                )
-            Width: =Parent.Width
+        img_logoMenuNavBar As image:
+            AlignInContainer: =AlignInContainer.Center
+            Height: =60
+            Image: =cmp_MenuNavbar.logo_Compact
+            LayoutMinWidth: =0
+            PaddingBottom: =10
+            PaddingTop: =Self.Height * cmp_MenuNavbar.logoPadding_Percent
+            Width: =70
+            X: =5
+            Y: =10
             ZIndex: =1
 
-    Image5 As image:
-        Image: |-
-            ="data:image/svg+xml;utf8, " & EncodeUrl( 
-                LookUp(customIcons, IconName = "Calendar").
-            )
-        ImagePosition: =ImagePosition.Center
-        Y: =95
-        ZIndex: =2
+        con_MenuBarCollapse As groupContainer.manualLayoutContainer:
+            AlignInContainer: =AlignInContainer.Center
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =35
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =35
+            X: =18
+            Y: =10
+            ZIndex: =2
+
+            img_MenuNavBarIcon As image:
+                Height: =Parent.Height
+                Image: |-
+                    ="data:image/svg+xml;utf8, " & EncodeUrl(
+                        Substitute(
+                            "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-list' viewBox='0 0 16 16'>
+                      <path fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5'/>
+                    </svg>",
+                            "currentColor", "Color.AliceBlue"
+                        )
+                    )
+                Width: =Parent.Width
+                ZIndex: =1
+
+        Gallery3 As gallery.galleryVertical:
+            DelayItemLoading: =true
+            FillPortions: =0
+            Height: =Self.AllItemsCount * (Self.TemplateHeight + Self.TemplatePadding)
+            Items: =cmp_MenuNavbar.MenuContent
+            Layout: =Layout.Vertical
+            LayoutMinHeight: =287
+            LayoutMinWidth: =0
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =0
+            TemplateSize: =50
+            ZIndex: =3
+
+            con_MenuContent As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                Height: =Parent.TemplateHeight
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Width: =Parent.TemplateWidth
+                ZIndex: =1
+
+                con_MenuContentItem As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    Fill: |-
+                        =If(
+                            cmp_MenuNavbar.CurrentMenuID = ThisItem.MenuID,
+                            cmp_MenuNavbar.SelectedIconBG,
+                            RGBA(0, 0, 0, 0)
+                        )
+                    Height: =Parent.Height * 70%
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Width: =Self.Height
+                    X: =(Parent.Width - Self.Width)/2
+                    Y: =(Parent.Height - Self.Height)/2
+                    ZIndex: =1
+
+                    Image5 As image:
+                        Height: =Parent.Height
+                        Image: |-
+                            ="data:image/svg+xml;utf8, " & EncodeUrl(
+                                Substitute(
+                                    ThisItem.MenuIcon,
+                                    "currentColor",
+                                    If(
+                                        cmp_MenuNavbar.CurrentMenuID = ThisItem.MenuID,
+                                        cmp_MenuNavbar.SelectedIconColor_text,
+                                        cmp_MenuNavbar.BaseIconColor_Text
+                                    )
+                                )
+                            )
+                        PaddingBottom: =5
+                        PaddingTop: =5
+                        Width: =Parent.Width
+                        X: =35
+                        Y: =35
+                        ZIndex: =1
+
+                    Button1 As button:
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =Parent.Height
+                        HoverFill: =cmp_MenuNavbar.HoverFill
+                        OnSelect: =Navigate(ThisItem.PageNavigation)
+                        PressedFill: =cmp_MenuNavbar.PressedFill
+                        Text: =""
+                        Width: =Parent.Width
+                        X: =35
+                        Y: =35
+                        ZIndex: =2
+
+        con_Profile As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =40
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =40
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =5
+            PaddingRight: =5
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =40
+            ZIndex: =4
+
+            con_ProfileIcon As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.Center
+                BorderColor: =RGBA(247, 116, 38, 1)
+                BorderThickness: =2
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =Self.Width
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =35
+                RadiusBottomRight: =35
+                RadiusTopLeft: =35
+                RadiusTopRight: =35
+                Width: =35
+                ZIndex: =1
+
+                Image4 As image:
+                    Height: =Parent.Height
+                    Image: =User().Image
+                    Width: =Parent.Width
+                    X: =35
+                    Y: =35
+                    ZIndex: =1
 

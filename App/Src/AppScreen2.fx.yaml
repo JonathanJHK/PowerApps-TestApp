@@ -59,7 +59,7 @@
                 BorderStyle: =BorderStyle.None
                 Color: =RGBA(255, 255, 255, 1)
                 Size: =12
-                Text: ="Bem vindo, " & User().FullName
+                Text: ="Bem vindo, " & UserFullName
                 Visible: =AppScreen2.Size<>1
                 Width: =200
                 ZIndex: =4

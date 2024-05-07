@@ -33,8 +33,10 @@ cmp_MenuNavbar As CanvasComponent:
             ZIndex: =1
 
     Image5 As image:
-        Image: =
-        X: =40
-        Y: =40
+        Image: |-
+            ="data:image/svg+xml;utf8, " & EncodeUrl( 
+                LookUp(c
+            )
+        Y: =85
         ZIndex: =2
 

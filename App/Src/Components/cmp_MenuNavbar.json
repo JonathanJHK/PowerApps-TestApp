@@ -100,14 +100,7 @@
             "ControlUniqueId": "87",
             "DynamicProperties": [
               {
-                "ControlPropertyState": "FillPortions",
-                "PropertyName": "FillPortions",
-                "Rule": {
-                  "Category": "Design",
-                  "InvariantScript": "0",
-                  "Property": "FillPortions",
-                  "RuleProviderType": "Unknown"
-                }
+                "PropertyName": "FillPortions"
               },
               {
                 "ControlPropertyState": {
@@ -127,31 +120,10 @@
                 }
               },
               {
-                "ControlPropertyState": {
-                  "AFDDataSourceName": "",
-                  "AutoRuleBindingEnabled": false,
-                  "AutoRuleBindingString": "",
-                  "InvariantPropertyName": "LayoutMinWidth",
-                  "IsLockable": false,
-                  "NameMapSourceSchema": "?"
-                },
-                "PropertyName": "LayoutMinWidth",
-                "Rule": {
-                  "Category": "Design",
-                  "InvariantScript": "0",
-                  "Property": "LayoutMinWidth",
-                  "RuleProviderType": "Unknown"
-                }
+                "PropertyName": "LayoutMinWidth"
               },
               {
-                "ControlPropertyState": "LayoutMinHeight",
-                "PropertyName": "LayoutMinHeight",
-                "Rule": {
-                  "Category": "Design",
-                  "InvariantScript": "100",
-                  "Property": "LayoutMinHeight",
-                  "RuleProviderType": "Unknown"
-                }
+                "PropertyName": "LayoutMinHeight"
               }
             ],
             "HasDynamicProperties": true,
@@ -420,9 +392,23 @@
                   "RadiusBottomRight",
                   "BorderThickness",
                   "FocusedBorderThickness",
-                  "PaddingTop",
+                  {
+                    "AFDDataSourceName": "",
+                    "AutoRuleBindingEnabled": false,
+                    "AutoRuleBindingString": "",
+                    "InvariantPropertyName": "PaddingTop",
+                    "IsLockable": false,
+                    "NameMapSourceSchema": "?"
+                  },
                   "PaddingRight",
-                  "PaddingBottom",
+                  {
+                    "AFDDataSourceName": "",
+                    "AutoRuleBindingEnabled": false,
+                    "AutoRuleBindingString": "",
+                    "InvariantPropertyName": "PaddingBottom",
+                    "IsLockable": false,
+                    "NameMapSourceSchema": "?"
+                  },
                   "PaddingLeft"
                 ],
                 "ControlUniqueId": "84",
@@ -467,7 +453,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "0",
+                    "InvariantScript": "5",
                     "Property": "PaddingTop",
                     "RuleProviderType": "Unknown"
                   },
@@ -491,7 +477,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "0",
+                    "InvariantScript": "5",
                     "Property": "PaddingBottom",
                     "RuleProviderType": "Unknown"
                   },
@@ -2179,7 +2165,7 @@
                 "PropertyName": "FillPortions",
                 "Rule": {
                   "Category": "Design",
-                  "InvariantScript": "0",
+                  "InvariantScript": "1",
                   "Property": "FillPortions",
                   "RuleProviderType": "Unknown"
                 }
@@ -2212,11 +2198,18 @@
                 }
               },
               {
-                "ControlPropertyState": "LayoutMinHeight",
+                "ControlPropertyState": {
+                  "AFDDataSourceName": "",
+                  "AutoRuleBindingEnabled": false,
+                  "AutoRuleBindingString": "",
+                  "InvariantPropertyName": "LayoutMinHeight",
+                  "IsLockable": false,
+                  "NameMapSourceSchema": "?"
+                },
                 "PropertyName": "LayoutMinHeight",
                 "Rule": {
                   "Category": "Design",
-                  "InvariantScript": "287",
+                  "InvariantScript": "0",
                   "Property": "LayoutMinHeight",
                   "RuleProviderType": "Unknown"
                 }
@@ -3382,7 +3375,14 @@
             "IsLockable": false,
             "NameMapSourceSchema": "?"
           },
-          "LayoutGap",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "LayoutGap",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "LayoutOverflowX",
           "LayoutOverflowY",
           "LayoutWrap",
@@ -3532,13 +3532,13 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "0",
+            "InvariantScript": "10",
             "Property": "LayoutGap",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "LayoutJustifyContent.SpaceBetween",
+            "InvariantScript": "LayoutJustifyContent.Start",
             "Property": "LayoutJustifyContent",
             "RuleProviderType": "Unknown"
           },
@@ -3774,7 +3774,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638507150257148328",
+    "LastModifiedTimestamp": "638507157831401256",
     "Name": "cmp_MenuNavbar",
     "Rules": [
       {
@@ -4014,7 +4014,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638507150257148328",
+  "LastModifiedTimestamp": "638507157831401256",
   "Name": "6d5bd4a25f3442cc99f2a05aee400f8d",
   "OverridableProperties": {},
   "Version": "1.0"

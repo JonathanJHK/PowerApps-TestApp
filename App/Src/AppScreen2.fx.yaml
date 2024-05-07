@@ -21,6 +21,7 @@
 
             cmp_MenuNavbar_1 As cmp_MenuNavbar:
                 Height: =Parent.Height
+                MenuContent: =customNavigation
                 Width: =Parent.Width
 
         ScreenContainer3 As groupContainer.verticalAutoLayoutContainer:

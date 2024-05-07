@@ -71,7 +71,7 @@ cmp_MenuNavbar As CanvasComponent:
         Fill: =cmp_MenuNavbar.NavBG
         Height: =Parent.Height
         LayoutDirection: =LayoutDirection.Vertical
-        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+        LayoutGap: =10
         LayoutMode: =LayoutMode.Auto
         PaddingBottom: =20
         PaddingLeft: =10
@@ -88,7 +88,6 @@ cmp_MenuNavbar As CanvasComponent:
             AlignInContainer: =AlignInContainer.Center
             Height: =60
             Image: =cmp_MenuNavbar.logo_Compact
-            LayoutMinWidth: =0
             PaddingBottom: =10
             PaddingTop: =Self.Height * cmp_MenuNavbar.logoPadding_Percent
             Width: =70
@@ -121,16 +120,17 @@ cmp_MenuNavbar As CanvasComponent:
                             "currentColor", "Color.AliceBlue"
                         )
                     )
+                PaddingBottom: =5
+                PaddingTop: =5
                 Width: =Parent.Width
                 ZIndex: =1
 
         Gallery3 As gallery.galleryVertical:
             DelayItemLoading: =true
-            FillPortions: =0
             Height: =Self.AllItemsCount * (Self.TemplateHeight + Self.TemplatePadding)
             Items: =cmp_MenuNavbar.MenuContent
             Layout: =Layout.Vertical
-            LayoutMinHeight: =287
+            LayoutMinHeight: =0
             LayoutMinWidth: =0
             LoadingSpinner: =LoadingSpinner.Data
             TemplatePadding: =0

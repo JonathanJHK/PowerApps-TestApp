@@ -150,7 +150,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "100",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "CurrentMenuID",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -233,7 +233,7 @@
         {
           "Category": "Data",
           "PropertyName": "MenuContent",
-          "RuleProviderType": "System"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",
@@ -248,7 +248,7 @@
         {
           "Category": "Data",
           "PropertyName": "CurrentMenuID",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",

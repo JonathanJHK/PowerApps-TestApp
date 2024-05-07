@@ -373,49 +373,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "AppScreen2.ScreenContainer3.con_Main_AppScreen2.gal_navTabs.AccessibleLabel"
+                  "fullyQualifiedName": "AppScreen2.Container1.ScreenContainer3.con_Main_AppScreen2.gal_navTabs.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "AppScreen2.ScreenContainer3.con_Main_AppScreen2.gal_navTabs.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "AppScreen2",
-                "type": "AppScreen2.ScreenContainer3.con_Main_AppScreen2.gal_navTabs"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "AppScreen2.ScreenContainer3.con_Main_AppScreen2.gal_navTabs.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "AppScreen2.ScreenContainer3.con_Main_AppScreen2.gal_navTabs.TabIndex",
+                  "fullyQualifiedName": "AppScreen2.Container1.ScreenContainer3.con_Main_AppScreen2.gal_navTabs.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "AppScreen2",
-                "type": "AppScreen2.ScreenContainer3.con_Main_AppScreen2.gal_navTabs"
+                "type": "AppScreen2.Container1.ScreenContainer3.con_Main_AppScreen2.gal_navTabs"
               }
             }
           ],
@@ -427,6 +397,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "AppScreen2.Container1.ScreenContainer3.con_Main_AppScreen2.gal_navTabs.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "AppScreen2.Container1.ScreenContainer3.con_Main_AppScreen2.gal_navTabs.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "AppScreen2",
+                "type": "AppScreen2.Container1.ScreenContainer3.con_Main_AppScreen2.gal_navTabs"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [

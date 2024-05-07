@@ -1,140 +1,168 @@
 "AppScreen2 As screen.'autoLayout_HeaderFooter_ver1.0'":
     Height: =Max(App.Height, If(App.Width < App.Height, App.DesignHeight, App.DesignWidth))
 
-    ScreenContainer3 As groupContainer.verticalAutoLayoutContainer:
-        Fill: =RGBA(245, 245, 245, 1)
+    Container1 As groupContainer.horizontalAutoLayoutContainer:
         Height: =Parent.Height
-        LayoutAlignItems: =LayoutAlignItems.Stretch
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutGap: =16
         LayoutMode: =LayoutMode.Auto
-        PaddingBottom: =16
-        PaddingLeft: =16
-        PaddingRight: =16
-        PaddingTop: =16
         Width: =Parent.Width
-        ZIndex: =1
+        ZIndex: =2
 
-        con_Header_AppScreen2 As groupContainer.horizontalAutoLayoutContainer:
-            BorderStyle: =BorderStyle.None
-            Fill: =RGBA(83, 144, 164, 1)
+        con_MenuNavBar As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.None
             FillPortions: =0
-            Height: =75
-            LayoutAlignItems: =LayoutAlignItems.Stretch
-            LayoutMinHeight: =100
+            LayoutMinHeight: =0
             LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =70
             ZIndex: =1
 
-            lbl_title As Texto:
-                Align: ='TextCanvas.Align'.Center
-                DisplayMode: =DisplayMode.Edit
-                FillPortions: =1
-                Font: =Font.'Open Sans'
-                FontColor: =RGBA(255, 255, 255, 1)
-                Height: =32
-                LayoutMinHeight: =32
-                LayoutMinWidth: =96
-                Size: =30
-                Text: ="RankingAPP"
-                Weight: ='TextCanvas.Weight'.Bold
-                Width: =96
-                Wrap: =true
-                X: =0
-                Y: =0
-                ZIndex: =1
-
-            img_userProfile As image:
+            cmp_MenuNavbar_1 As cmp_MenuNavbar:
                 Height: =Parent.Height
-                Image: ='1215709494'
-                ImagePosition: =ImagePosition.Fill
-                LayoutMinHeight: =Parent.Height
-                ZIndex: =2
+                Width: =Parent.Width
 
-            lbl_nameUser As label:
-                BorderStyle: =BorderStyle.None
-                Color: =RGBA(255, 255, 255, 1)
-                Size: =12
-                Text: ="Bem vindo, " & UserFullName
-                Visible: =AppScreen2.Size<>1
-                Width: =200
-                ZIndex: =4
-
-        con_Main_AppScreen2 As groupContainer.horizontalAutoLayoutContainer:
-            FillPortions: =0
-            Height: =100
+        ScreenContainer3 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
+            Fill: =RGBA(245, 245, 245, 1)
+            Height: =Parent.Height
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =16
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =Parent.Width
             ZIndex: =2
 
-            gal_navTabs As gallery.galleryVertical:
-                DelayItemLoading: =true
-                Items: =col_Tabs
-                Layout: =Layout.Vertical
-                LayoutMinHeight: =Parent.Height
-                LayoutMinWidth: =320
-                LoadingSpinner: =LoadingSpinner.Data
-                OnSelect: =Set(var_tabSelect, ThisItem.ID)
-                TemplateFill: =If(ThisItem.IsSelected, RGBA(19, 137, 126, 0.45), RGBA(0, 0, 0, 0))
-                TemplatePadding: =0
-                TemplateSize: =Parent.Height
-                WrapCount: =4
+            con_Header_AppScreen2 As groupContainer.horizontalAutoLayoutContainer:
+                BorderStyle: =BorderStyle.None
+                Fill: =RGBA(83, 144, 164, 1)
+                FillPortions: =0
+                Height: =75
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
                 ZIndex: =1
 
-                ico_navTabs As icon.Add:
-                    Height: =30
-                    Icon: =ThisItem.Logo
-                    OnSelect: =Select(Parent)
-                    Width: =30
-                    X: =(Parent.TemplateWidth - Self.Width)/ 2
-                    Y: =5
+                lbl_title As Texto:
+                    Align: ='TextCanvas.Align'.Center
+                    DisplayMode: =DisplayMode.Edit
+                    FillPortions: =1
+                    Font: =Font.'Open Sans'
+                    FontColor: =RGBA(255, 255, 255, 1)
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Size: =30
+                    Text: ="RankingAPP"
+                    Weight: ='TextCanvas.Weight'.Bold
+                    Width: =96
+                    Wrap: =true
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                img_userProfile As image:
+                    Height: =Parent.Height
+                    Image: ='1215709494'
+                    ImagePosition: =ImagePosition.Fill
+                    LayoutMinHeight: =Parent.Height
                     ZIndex: =2
 
-                Rectangle5 As rectangle:
-                    Height: =6
-                    OnSelect: =Select(Parent)
-                    Visible: =var_tabSelect = ThisItem.ID
-                    Width: =Parent.TemplateWidth
-                    Y: =94
-                    ZIndex: =3
-
-                lbl_navTabs As label:
-                    Align: =Align.Center
-                    OnSelect: =Select(Parent)
-                    Text: =ThisItem.Name
-                    Width: =Parent.TemplateWidth
-                    Y: =30
+                lbl_nameUser As label:
+                    BorderStyle: =BorderStyle.None
+                    Color: =RGBA(255, 255, 255, 1)
+                    Size: =12
+                    Text: ="Bem vindo, " & UserFullName
+                    Visible: =AppScreen2.Size<>1
+                    Width: =200
                     ZIndex: =4
 
-        MainContainer3 As groupContainer.verticalAutoLayoutContainer:
-            Fill: =RGBA(214, 221, 224, 1)
-            LayoutDirection: =LayoutDirection.Vertical
-            LayoutMinHeight: =100
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            ZIndex: =3
+            con_Main_AppScreen2 As groupContainer.horizontalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =100
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =2
 
-        FooterContainer2 As groupContainer.horizontalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.SetByContainer
-            Fill: =RGBA(174, 208, 221, 1)
-            FillPortions: =0
-            Height: =75
-            LayoutMinHeight: =100
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Width: =Parent.Width - 30
-            ZIndex: =4
+                gal_navTabs As gallery.galleryVertical:
+                    DelayItemLoading: =true
+                    Items: =col_Tabs
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =Parent.Height
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    OnSelect: =Set(var_tabSelect, ThisItem.ID)
+                    TemplateFill: =If(ThisItem.IsSelected, RGBA(19, 137, 126, 0.45), RGBA(0, 0, 0, 0))
+                    TemplatePadding: =0
+                    TemplateSize: =Parent.Height
+                    WrapCount: =4
+                    ZIndex: =1
+
+                    ico_navTabs As icon.Add:
+                        Height: =30
+                        Icon: =ThisItem.Logo
+                        OnSelect: =Select(Parent)
+                        Width: =30
+                        X: =(Parent.TemplateWidth - Self.Width)/ 2
+                        Y: =5
+                        ZIndex: =2
+
+                    Rectangle5 As rectangle:
+                        Height: =6
+                        OnSelect: =Select(Parent)
+                        Visible: =var_tabSelect = ThisItem.ID
+                        Width: =Parent.TemplateWidth
+                        Y: =94
+                        ZIndex: =3
+
+                    lbl_navTabs As label:
+                        Align: =Align.Center
+                        OnSelect: =Select(Parent)
+                        Text: =ThisItem.Name
+                        Width: =Parent.TemplateWidth
+                        Y: =30
+                        ZIndex: =4
+
+            MainContainer3 As groupContainer.verticalAutoLayoutContainer:
+                Fill: =RGBA(214, 221, 224, 1)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                ZIndex: =3
+
+            FooterContainer2 As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Fill: =RGBA(174, 208, 221, 1)
+                FillPortions: =0
+                Height: =75
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =Parent.Width - 30
+                ZIndex: =4
 

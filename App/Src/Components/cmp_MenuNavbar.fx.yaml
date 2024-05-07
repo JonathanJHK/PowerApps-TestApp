@@ -3,7 +3,7 @@ cmp_MenuNavbar As CanvasComponent:
     BaseIconColor_Text: ="RGBA(115,131,176,1)"
     CurrentMenuID: =1
     Fill: =RGBA(0, 0, 0, 0)
-    Height: =768
+    Height: =1336
     HoverFill: =RGBA(0, 0, 0, 0.1)
     logo_Compact: ='Logo RotaMP App_Completa_Completa'
     logoPadding_Percent: =20%
@@ -69,7 +69,7 @@ cmp_MenuNavbar As CanvasComponent:
     con_RootMenuNavBar As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
         Fill: =cmp_MenuNavbar.NavBG
-        Height: =768
+        Height: =Parent.Height
         LayoutDirection: =LayoutDirection.Vertical
         LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
         LayoutMode: =LayoutMode.Auto
@@ -170,7 +170,11 @@ cmp_MenuNavbar As CanvasComponent:
                         Image: |-
                             ="data:image/svg+xml;utf8, " & EncodeUrl(
                                 Substitute(
-                                    ThisItem.MenuIcon,
+                                    If(
+                                        cmp_MenuNavbar.CurrentMenuID = ThisItem.MenuID,
+                                        ThisItem.MenuIcon_Selected,
+                                        ThisItem.MenuIcon
+                                    ),
                                     "currentColor",
                                     If(
                                         cmp_MenuNavbar.CurrentMenuID = ThisItem.MenuID,
@@ -179,8 +183,8 @@ cmp_MenuNavbar As CanvasComponent:
                                     )
                                 )
                             )
-                        PaddingBottom: =5
-                        PaddingTop: =5
+                        PaddingBottom: =8
+                        PaddingTop: =8
                         Width: =Parent.Width
                         X: =35
                         Y: =35

@@ -100,7 +100,7 @@
                     OnSelect: =Select(Parent)
                     Visible: =var_tabSelect = ThisItem.ID
                     Width: =Parent.TemplateWidth
-                    Y: =89
+                    Y: =94
                     ZIndex: =3
 
                 lbl_navTabs As label:

@@ -1,0 +1,43 @@
+cmp_MenuNavbar As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    Width: =70
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    con_MenuBarCollapse As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.None
+        Height: =35
+        RadiusBottomLeft: =10
+        RadiusBottomRight: =10
+        RadiusTopLeft: =10
+        RadiusTopRight: =10
+        Width: =35
+        X: =15
+        Y: =15
+        ZIndex: =1
+
+        img_MenuBarIcon As image:
+            Height: =Parent.Height
+            Image: |-
+                ="data:image/svg+xml;utf8, " & EncodeUrl(
+                    Substitute(
+                        "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-list' viewBox='0 0 16 16'>
+                  <path fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5'/>
+                </svg>",
+                        "currentColor", SampleImage
+                    )
+                )
+            Width: =Parent.Width
+            ZIndex: =1
+
+    Image5 As image:
+        Image: |-
+            ="data:image/svg+xml;utf8, " & EncodeUrl(
+                LookUp(customIcons, IconName = "Calendar").iconData
+            )
+        X: =40
+        Y: =40
+        ZIndex: =2
+

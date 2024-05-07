@@ -14,35 +14,39 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.Formulas"
+                  "fullyQualifiedName": "cmp_MenuNavbar.Image5.Image"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.Formulas",
+                  "fullyQualifiedName": "cmp_MenuNavbar.Image5.Image",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charOffset": 1699,
+                  "charLength": 11,
+                  "charOffset": 54,
                   "snippet": {
-                    "text": ""
+                    "text": "customIcons"
                   }
                 }
               },
               "properties": {
-                "member": "Formulas",
-                "module": "App",
-                "type": "App"
+                "member": "Image",
+                "module": "cmp_MenuNavbar",
+                "type": "cmp_MenuNavbar.Image5"
               }
             }
           ],
           "message": {
+            "arguments": [
+              "customIcons"
+            ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrNamedFormula-MissingSemicolon",
+          "ruleId": "app-ErrInvalidName",
           "ruleIndex": 0
         },
         {
@@ -59,9 +63,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charOffset": 58,
+                  "charLength": 6,
+                  "charOffset": 47,
                   "snippet": {
-                    "text": ""
+                    "text": "LookUp"
                   }
                 }
               },
@@ -74,15 +79,14 @@
           ],
           "message": {
             "arguments": [
-              "Eof",
-              "ParenClose"
+              "LookUp"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
+          "ruleId": "app-ErrInvalidArgs-Func",
           "ruleIndex": 1
         },
         {
@@ -99,10 +103,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 1,
-                  "charOffset": 54,
+                  "charLength": 8,
+                  "charOffset": 67,
                   "snippet": {
-                    "text": "c"
+                    "text": "IconName"
                   }
                 }
               },
@@ -115,7 +119,7 @@
           ],
           "message": {
             "arguments": [
-              "c"
+              "IconName"
             ],
             "id": "issue"
           },
@@ -123,6 +127,47 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmp_MenuNavbar.Image5.Image"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmp_MenuNavbar.Image5.Image",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 76,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Image",
+                "module": "cmp_MenuNavbar",
+                "type": "cmp_MenuNavbar.Image5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Error",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
           "ruleIndex": 2
         },
         {
@@ -139,10 +184,47 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 11,
-                  "charOffset": 47,
+                  "charLength": 9,
+                  "charOffset": 89,
                   "snippet": {
-                    "text": "LookUp(c\r\n)"
+                    "text": ".IconData"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Image",
+                "module": "cmp_MenuNavbar",
+                "type": "cmp_MenuNavbar.Image5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmp_MenuNavbar.Image5.Image"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmp_MenuNavbar.Image5.Image",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 30,
+                  "snippet": {
+                    "text": "EncodeUrl"
                   }
                 }
               },
@@ -155,17 +237,15 @@
           ],
           "message": {
             "arguments": [
-              "1",
-              "2",
-              "3"
+              "EncodeUrl"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrBadArityRange",
-          "ruleIndex": 3
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -923,37 +1003,6 @@
           "name": "PowerApps app checker",
           "rules": [
             {
-              "id": "app-ErrNamedFormula-MissingSemicolon",
-              "messageStrings": {
-                "issue": {
-                  "text": "Named formula must end with a semicolon."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
-              "id": "app-ErrExpectedFound-Ex-Fnd",
-              "messageStrings": {
-                "issue": {
-                  "text": "Unexpected characters. The formula contains '{0}' where '{1}' is expected."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Remove or replace the unexpected characters with an expected character."
-                ],
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
               "id": "app-ErrInvalidName",
               "messageStrings": {
                 "issue": {
@@ -971,10 +1020,42 @@
               }
             },
             {
-              "id": "app-ErrBadArityRange",
+              "id": "app-ErrInvalidArgs-Func",
               "messageStrings": {
                 "issue": {
-                  "text": "Invalid number of arguments: received {0}, expected {1}-{2}."
+                  "text": "The function '{0}' has some invalid arguments."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrIncompatibleTypesForEquality-Left-Right",
+              "messageStrings": {
+                "issue": {
+                  "text": "Incompatible types for comparison. These types can't be compared: {0}, {1}."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "You might need to convert the value to be the same type, such as converting a date string (e.g., \"12/31/2018\") to a date value.",
+                  "If you’re comparing records or tables, the field or column types must match exactly."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidDot",
+              "messageStrings": {
+                "issue": {
+                  "text": "Invalid use of '.'"
                 }
               },
               "properties": {

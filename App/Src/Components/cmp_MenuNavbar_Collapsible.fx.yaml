@@ -135,7 +135,7 @@ cmp_MenuNavbar_Collapsible As CanvasComponent:
                 Height: =Parent.Height
                 HoverColor: =cmp_MenuNavbar_Collapsible.HoverFill
                 HoverFill: =cmp_MenuNavbar_Collapsible.HoverFill
-                OnSelect: =gbl_MenuExpanded
+                OnSelect: =Set(gbl_MenuExpanded, !gbl_MenuExpanded)
                 PressedColor: =cmp_MenuNavbar_Collapsible.PressedFill
                 Text: =""
                 Width: =Parent.Width

@@ -14,12 +14,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cmp_MenuNavbar_Collapsible.con_RootMenuNavBar_1.con_MenuBarCollapse_1.Button5.OnSelect"
+                  "fullyQualifiedName": "cmp_MenuNavbar_Collapsible.MenuExpanded"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cmp_MenuNavbar_Collapsible.con_RootMenuNavBar_1.con_MenuBarCollapse_1.Button5.OnSelect",
+                  "fullyQualifiedName": "cmp_MenuNavbar_Collapsible.MenuExpanded",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -31,9 +31,9 @@
                 }
               },
               "properties": {
-                "member": "OnSelect",
+                "member": "MenuExpanded",
                 "module": "cmp_MenuNavbar_Collapsible",
-                "type": "cmp_MenuNavbar_Collapsible.con_RootMenuNavBar_1.con_MenuBarCollapse_1.Button5"
+                "type": "cmp_MenuNavbar_Collapsible"
               }
             }
           ],

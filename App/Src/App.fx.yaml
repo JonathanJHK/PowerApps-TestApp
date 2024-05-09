@@ -71,6 +71,10 @@ App As appinfo:
             gblTeste3,
             3
         );
+        Set(
+            gbl_MenuExpanded,
+            !gbl_MenuExpanded
+        );
         //Set tab navbar
         ClearCollect(
             col_Tabs,

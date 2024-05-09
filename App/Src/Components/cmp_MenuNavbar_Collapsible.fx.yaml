@@ -1,4 +1,4 @@
-cmp_MenuNavbar As CanvasComponent:
+cmp_MenuNavbar_Collapsible As CanvasComponent:
     BaseIconColor: =RGBA(115, 131, 176, 1)
     BaseIconColor_Text: ="RGBA(115,131,176,1)"
     CurrentMenuID: =1
@@ -56,19 +56,20 @@ cmp_MenuNavbar As CanvasComponent:
                 PageNavigation: App.ActiveScreen
             }
         )
+    MenuExpanded: =gbl_MenuExpanded
     NavBG: =RGBA(0, 0, 0, 0.05)
     PressedFill: =RGBA(0, 0, 0, 0.2)
     SelectedIconBG: =RGBA(255, 255, 255, 1)
     SelectedIconColor: =RGBA(254, 189, 47, 1)
     SelectedIconColor_text: ="RGBA(254, 189, 47, 1)"
-    Width: =70
+    Width: =If(cmp_MenuNavbar_Collapsible.MenuExpanded, 150, 70)
     X: =0
     Y: =0
     ZIndex: =1
 
-    con_RootMenuNavBar As groupContainer.verticalAutoLayoutContainer:
+    con_RootMenuNavBar_1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
-        Fill: =cmp_MenuNavbar.NavBG
+        Fill: =cmp_MenuNavbar_Collapsible.NavBG
         Height: =Parent.Height
         LayoutDirection: =LayoutDirection.Vertical
         LayoutGap: =10
@@ -84,18 +85,18 @@ cmp_MenuNavbar As CanvasComponent:
         Width: =70
         ZIndex: =1
 
-        img_logoMenuNavBar As image:
+        img_logoMenuNavBar_1 As image:
             AlignInContainer: =AlignInContainer.Center
             Height: =60
-            Image: =cmp_MenuNavbar.logo_Compact
+            Image: =cmp_MenuNavbar_Collapsible.logo_Compact
             PaddingBottom: =10
-            PaddingTop: =Self.Height * cmp_MenuNavbar.logoPadding_Percent
+            PaddingTop: =Self.Height * cmp_MenuNavbar_Collapsible.logoPadding_Percent
             Width: =70
             X: =5
             Y: =10
             ZIndex: =1
 
-        con_MenuBarCollapse As groupContainer.manualLayoutContainer:
+        con_MenuBarCollapse_1 As groupContainer.manualLayoutContainer:
             AlignInContainer: =AlignInContainer.Center
             DropShadow: =DropShadow.None
             FillPortions: =0
@@ -111,7 +112,7 @@ cmp_MenuNavbar As CanvasComponent:
             Y: =10
             ZIndex: =2
 
-            img_MenuNavBarIcon As image:
+            img_MenuNavBarIcon_1 As image:
                 Height: =Parent.Height
                 Image: |-
                     ="data:image/svg+xml;utf8, " & EncodeUrl(
@@ -119,7 +120,7 @@ cmp_MenuNavbar As CanvasComponent:
                             "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-list' viewBox='0 0 16 16'>
                       <path fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5'/>
                     </svg>",
-                            "currentColor", "Color.AliceBlue"
+                            "currentColor", cmp_MenuNavbar_Collapsible.BaseIconColor_Text
                         )
                     )
                 PaddingBottom: =5
@@ -127,10 +128,25 @@ cmp_MenuNavbar As CanvasComponent:
                 Width: =Parent.Width
                 ZIndex: =1
 
-        Gallery3 As gallery.galleryVertical:
+            Button5 As button:
+                BorderThickness: =0
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =Parent.Height
+                HoverColor: =cmp_MenuNavbar_Collapsible.HoverFill
+                HoverFill: =cmp_MenuNavbar_Collapsible.HoverFill
+                OnSelect: =gbl_MenuExpanded
+                PressedColor: =cmp_MenuNavbar_Collapsible.PressedFill
+                Text: =""
+                Width: =Parent.Width
+                X: =35
+                Y: =35
+                ZIndex: =2
+
+        Gallery3_1 As gallery.galleryVertical:
             DelayItemLoading: =true
             Height: =Self.AllItemsCount * (Self.TemplateHeight + Self.TemplatePadding)
-            Items: =cmp_MenuNavbar.MenuContent
+            Items: =cmp_MenuNavbar_Collapsible.MenuContent
             Layout: =Layout.Vertical
             LayoutMinHeight: =0
             LayoutMinWidth: =0
@@ -139,7 +155,7 @@ cmp_MenuNavbar As CanvasComponent:
             TemplateSize: =50
             ZIndex: =3
 
-            con_MenuContent As groupContainer.manualLayoutContainer:
+            con_MenuContent_1 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.None
                 Height: =Parent.TemplateHeight
                 RadiusBottomLeft: =0
@@ -149,12 +165,12 @@ cmp_MenuNavbar As CanvasComponent:
                 Width: =Parent.TemplateWidth
                 ZIndex: =1
 
-                con_MenuContentItem As groupContainer.manualLayoutContainer:
+                con_MenuContentItem_1 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.None
                     Fill: |-
                         =If(
-                            cmp_MenuNavbar.CurrentMenuID = ThisItem.MenuID,
-                            cmp_MenuNavbar.SelectedIconBG,
+                            cmp_MenuNavbar_Collapsible.CurrentMenuID = ThisItem.MenuID,
+                            cmp_MenuNavbar_Collapsible.SelectedIconBG,
                             RGBA(0, 0, 0, 0)
                         )
                     Height: =Parent.Height * 70%
@@ -167,21 +183,21 @@ cmp_MenuNavbar As CanvasComponent:
                     Y: =(Parent.Height - Self.Height)/2
                     ZIndex: =1
 
-                    Image5 As image:
+                    Image5_1 As image:
                         Height: =Parent.Height
                         Image: |-
                             ="data:image/svg+xml;utf8, " & EncodeUrl(
                                 Substitute(
                                     If(
-                                        cmp_MenuNavbar.CurrentMenuID = ThisItem.MenuID,
+                                        cmp_MenuNavbar_Collapsible.CurrentMenuID = ThisItem.MenuID,
                                         ThisItem.MenuIcon_Selected,
                                         ThisItem.MenuIcon
                                     ),
                                     "currentColor",
                                     If(
-                                        cmp_MenuNavbar.CurrentMenuID = ThisItem.MenuID,
-                                        cmp_MenuNavbar.SelectedIconColor_text,
-                                        cmp_MenuNavbar.BaseIconColor_Text
+                                        cmp_MenuNavbar_Collapsible.CurrentMenuID = ThisItem.MenuID,
+                                        cmp_MenuNavbar_Collapsible.SelectedIconColor_text,
+                                        cmp_MenuNavbar_Collapsible.BaseIconColor_Text
                                     )
                                 )
                             )
@@ -190,17 +206,17 @@ cmp_MenuNavbar As CanvasComponent:
                         Width: =Parent.Width
                         ZIndex: =1
 
-                    Button1 As button:
+                    Button1_1 As button:
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =Parent.Height
-                        HoverFill: =cmp_MenuNavbar.HoverFill
+                        HoverFill: =cmp_MenuNavbar_Collapsible.HoverFill
                         OnSelect: =Navigate(ThisItem.PageNavigation)
-                        PressedFill: =cmp_MenuNavbar.PressedFill
+                        PressedFill: =cmp_MenuNavbar_Collapsible.PressedFill
                         Text: =""
                         Width: =Parent.Width
                         ZIndex: =2
 
-        con_Profile As groupContainer.horizontalAutoLayoutContainer:
+        con_Profile_1 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.None
             FillPortions: =0
             Height: =40
@@ -218,7 +234,7 @@ cmp_MenuNavbar As CanvasComponent:
             Width: =40
             ZIndex: =4
 
-            con_ProfileIcon As groupContainer.manualLayoutContainer:
+            con_ProfileIcon_1 As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.Center
                 BorderColor: =RGBA(247, 116, 38, 1)
                 BorderThickness: =2
@@ -234,7 +250,7 @@ cmp_MenuNavbar As CanvasComponent:
                 Width: =35
                 ZIndex: =1
 
-                Image4 As image:
+                Image4_1 As image:
                     Height: =Parent.Height
                     Image: =User().Image
                     Width: =Parent.Width

@@ -56,6 +56,7 @@ cmp_MenuNavbar As CanvasComponent:
                 PageNavigation: App.ActiveScreen
             }
         )
+    MenuExpanded: =var_MenuExpanded
     NavBG: =RGBA(0, 0, 0, 0.05)
     PressedFill: =RGBA(0, 0, 0, 0.2)
     SelectedIconBG: =RGBA(255, 255, 255, 1)
@@ -126,6 +127,15 @@ cmp_MenuNavbar As CanvasComponent:
                 PaddingTop: =5
                 Width: =Parent.Width
                 ZIndex: =1
+
+            btn_MenuBarCollapse As button:
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =Parent.Height
+                HoverColor: =cmp_MenuNavbar.HoverFill
+                PressedColor: =cmp_MenuNavbar.PressedFill
+                Text: =""
+                Width: =Parent.Width
+                ZIndex: =2
 
         Gallery3 As gallery.galleryVertical:
             DelayItemLoading: =true

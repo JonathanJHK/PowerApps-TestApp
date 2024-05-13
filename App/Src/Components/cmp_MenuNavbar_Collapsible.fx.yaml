@@ -128,19 +128,17 @@ cmp_MenuNavbar_Collapsible As CanvasComponent:
                 Width: =Parent.Width
                 ZIndex: =1
 
-            Button5 As button:
+            bnt_MenuNavCollapse As button:
                 BorderThickness: =0
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =Parent.Height
                 HoverColor: =cmp_MenuNavbar_Collapsible.HoverFill
                 HoverFill: =cmp_MenuNavbar_Collapsible.HoverFill
-                OnSelect: =Set(gbl_MenuExpanded, !gbl_MenuExpanded)
+                OnSelect: =Set(gbl_MenuExpanded, !gbl_MenuExpanded);
                 PressedColor: =cmp_MenuNavbar_Collapsible.PressedFill
                 Text: =""
                 Width: =Parent.Width
-                X: =35
-                Y: =35
                 ZIndex: =2
 
         Gallery3_1 As gallery.galleryVertical:

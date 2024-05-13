@@ -83,12 +83,12 @@
                             ZIndex: =1
 
                             "'ID Participante_DataCard1' As typedDataCard.allowedValuesStringEditCard":
-                                AllowedValues: =DataSourceInfo([@Ranking], DataSourceInfo.AllowedValues, ID_x0020_Participante)
+                                AllowedValues: =DataSourceInfo([@Ranking], DataSourceInfo.AllowedValues, 'ID Participante')
                                 BorderStyle: =BorderStyle.Solid
                                 DataField: ="ID_x0020_Participante"
                                 Default: =ThisItem.'ID Participante'
                                 DisplayMode: =Parent.DisplayMode
-                                DisplayName: =DataSourceInfo([@Ranking],DataSourceInfo.DisplayName,ID_x0020_Participante)
+                                DisplayName: =DataSourceInfo([@Ranking],DataSourceInfo.DisplayName,'ID Participante')
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Height: =50
                                 Required: =false

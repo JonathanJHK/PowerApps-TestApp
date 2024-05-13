@@ -19,10 +19,8 @@
             Width: =70
             ZIndex: =1
 
-            cmp_MenuNavbar_1 As cmp_MenuNavbar:
-                Height: =Parent.Height
-                MenuContent: =customNavigation
-                Width: =Parent.Width
+            cmp_MenuNavbar_Collapsible_1 As cmp_MenuNavbar_Collapsible:
+                Width: =If(cmp_MenuNavbar_Collapsible_1.MenuExpanded, 150, 70)
 
         ScreenContainer3 As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.None

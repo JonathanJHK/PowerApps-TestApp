@@ -14,46 +14,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cmp_MenuNavbar_Collapsible.MenuExpanded"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "cmp_MenuNavbar_Collapsible.MenuExpanded",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 16,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "gbl_MenuExpanded"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MenuExpanded",
-                "module": "cmp_MenuNavbar_Collapsible",
-                "type": "cmp_MenuNavbar_Collapsible"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "gbl_MenuExpanded"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "cmp_MenuNavbar.MenuExpanded"
                 }
               ],
@@ -88,106 +48,6 @@
           },
           "ruleId": "app-ErrInvalidName",
           "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "AppScreen2.Container1.con_MenuNavBar.cmp_MenuNavbar_Collapsible_1.MenuExpanded"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "AppScreen2.Container1.con_MenuNavBar.cmp_MenuNavbar_Collapsible_1.MenuExpanded",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 16,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "gbl_MenuExpanded"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MenuExpanded",
-                "module": "AppScreen2",
-                "type": "AppScreen2.Container1.con_MenuNavBar.cmp_MenuNavbar_Collapsible_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "gbl_MenuExpanded"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "cmp_MenuNavbar_Collapsible.con_RootMenuNavBar_1.Gallery3_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "cmp_MenuNavbar_Collapsible.con_RootMenuNavBar_1.Gallery3_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "cmp_MenuNavbar_Collapsible",
-                "type": "cmp_MenuNavbar_Collapsible.con_RootMenuNavBar_1.Gallery3_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "cmp_MenuNavbar_Collapsible.con_RootMenuNavBar_1.Gallery3_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "cmp_MenuNavbar_Collapsible.con_RootMenuNavBar_1.Gallery3_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "cmp_MenuNavbar_Collapsible",
-                "type": "cmp_MenuNavbar_Collapsible.con_RootMenuNavBar_1.Gallery3_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
         },
         {
           "locations": [
@@ -237,6 +97,66 @@
                 "member": "TabIndex",
                 "module": "cmp_MenuNavbar",
                 "type": "cmp_MenuNavbar.con_RootMenuNavBar.Gallery3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmp_MenuNavbar_Collapsible.con_RootMenuNavBar_1.Gallery3_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmp_MenuNavbar_Collapsible.con_RootMenuNavBar_1.Gallery3_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "cmp_MenuNavbar_Collapsible",
+                "type": "cmp_MenuNavbar_Collapsible.con_RootMenuNavBar_1.Gallery3_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cmp_MenuNavbar_Collapsible.con_RootMenuNavBar_1.Gallery3_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cmp_MenuNavbar_Collapsible.con_RootMenuNavBar_1.Gallery3_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "cmp_MenuNavbar_Collapsible",
+                "type": "cmp_MenuNavbar_Collapsible.con_RootMenuNavBar_1.Gallery3_1"
               }
             }
           ],

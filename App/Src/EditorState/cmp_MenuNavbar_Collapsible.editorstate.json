@@ -624,7 +624,7 @@
       "Type": "ControlInfo"
     },
     "cmp_MenuNavbar_Collapsible": {
-      "AllowAccessToGlobals": false,
+      "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
         {
@@ -2387,7 +2387,7 @@
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",

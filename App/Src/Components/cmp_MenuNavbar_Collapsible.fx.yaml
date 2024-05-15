@@ -82,7 +82,7 @@ cmp_MenuNavbar_Collapsible As CanvasComponent:
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Width: =70
+        Width: =If(cmp_MenuNavbar_Collapsible.MenuExpanded, 150, 70)
         ZIndex: =1
 
         img_logoMenuNavBar_1 As image:

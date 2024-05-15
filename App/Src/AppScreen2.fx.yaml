@@ -16,10 +16,11 @@
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Width: =70
+            Width: =If(cmp_MenuNavbar_Collapsible_1.MenuExpanded, 150, 70)
             ZIndex: =1
 
             cmp_MenuNavbar_Collapsible_1 As cmp_MenuNavbar_Collapsible:
+                Height: =Parent.Height
                 Width: =If(cmp_MenuNavbar_Collapsible_1.MenuExpanded, 150, 70)
 
         ScreenContainer3 As groupContainer.verticalAutoLayoutContainer:
